@@ -1,8 +1,6 @@
 package com.ganciaux.neuropsy.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,7 +16,11 @@ public class Form {
 
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name="category_id", nullable=false)
     private Category category;
 
+    @ManyToOne
+    @JoinColumn(name="page_id", nullable=false)
     private Page page;
 }

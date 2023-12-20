@@ -1,5 +1,6 @@
 package com.ganciaux.neuropsy.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -17,5 +18,6 @@ public class ItemValue {
     private Integer id;
     private String label;
     private Integer value;
-    private Integer order;
+    @Column(name = "item_order")
+    private Integer itemOrder;
 }

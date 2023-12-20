@@ -1,11 +1,11 @@
 package com.ganciaux.neuropsy.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -17,4 +17,7 @@ public class Page {
     private Integer id;
 
     private String name;
+
+    @OneToMany(mappedBy="page")
+    private Set<Form> forms;
 }
