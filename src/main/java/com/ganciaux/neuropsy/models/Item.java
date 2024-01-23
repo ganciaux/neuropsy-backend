@@ -1,9 +1,8 @@
 package com.ganciaux.neuropsy.models;
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 public class Item {
     @Id
@@ -16,4 +15,6 @@ public class Item {
     private boolean required;
     private boolean multiple;
     private Integer order;
+    @OneToMany(mappedBy="item")
+    List<Item> items;
 }
