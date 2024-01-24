@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/clients")
+@RequestMapping("/api/clients")
 public class ClientController {
     private final ClientRepository repository;
 
@@ -27,12 +27,12 @@ public class ClientController {
         return repository.findAll();
     }
 
-    @GetMapping("/{firstname}")
+    @GetMapping("/search-all-firstname/{firstname}")
     List<Client> getClientsByFirstname(@PathVariable("firstname") String firstname){
         return repository.findAllByFirstname(firstname);
     }
 
-    @GetMapping("/search/{firstname}")
+    @GetMapping("/search-by-firstname/{firstname}")
     List<Client> searchClientsByFirstname(@PathVariable("firstname") String firstname){
         return repository.searchByFirstname(firstname);
     }
