@@ -1,16 +1,17 @@
 package com.ganciaux.neuropsy.services;
 
+import com.ganciaux.neuropsy.dto.ClientDTO;
 import com.ganciaux.neuropsy.models.Client;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface ClientService {
-    Integer save(Client client);
+    Integer save(ClientDTO client);
 
-    List<Client> findAll();
+    List<ClientDTO> findAll();
 
-    Optional<Client> findById(Integer id);
+    Optional<ClientDTO> findById(Integer id);
 
     void delete(Integer id);
 }
