@@ -1,1 +1,94 @@
-https://lucid.app/lucidchart/a2caa44a-9eba-4001-bc0d-483741396bdb/edit?page=0_0&invitationId=inv_0850c61e-4512-43d7-a16a-685a7408eebe#
+user
+----
+name
+login
+pwd
+...
+
+
+client
+-----
+name
+address
+...
+
+
+category
+--------
+name
+
+
+form
+----
+name
+category
+first_page  ?? or get order=0 from form_page
+
+
+page
+-----
+name
+
+
+form_page
+----------
+form
+page
+order ?? or add next_page
+
+
+item
+----
+page
+name
+type				-- int, double, text, date, range, checkbox / list from item_value...
+mandatory
+multiple			-- yes/no
+order				-- order in a page
+
+
+item_list_value
+--------------
+item
+value
+label
+order
+
+
+client_form
+-----------
+id
+form
+client
+user
+date
+status	-- in progress, done, canceled, deleted ?
+create
+update
+current -- current page
+
+
+client_item
+----------
+id
+form		| => id from client_form
+client		|
+page
+item
+create
+update
+
+
+client_item_value
+-----------------
+form		| => id from client_item
+client		|
+page		|
+item		|
+order
+type		-- int, double, text, date, range, list from item_value...
+value
+create
+update
+
+

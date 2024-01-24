@@ -23,5 +23,5 @@ public class ItemValue {
 
     @ManyToOne
     @JoinColumn(name="item_id", nullable=false)
-    private Item item;
+    private Category item;
 }

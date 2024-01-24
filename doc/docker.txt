@@ -1,0 +1,7 @@
+docker run --name neuropsyPsql -p 5432:5432 -e POSTGRES_USER=ganciaux -e POSTGRES_PASSWORD=enscred -e POSTGRES_DB=neuropsy -d postgres
+docker run --name neuropsySpring -p 5432:5432 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=ganc -e POSTGRES_DB=neuropsy -d postgres
+docker run --name neuropsyMysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=enscred -d mysql
+
+docker exec neuropsyPsql env
+
+

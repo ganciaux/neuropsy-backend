@@ -3,6 +3,7 @@ package com.ganciaux.neuropsy.models;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 
 public class Item {
     @Id
@@ -16,5 +17,5 @@ public class Item {
     private boolean multiple;
     private Integer order;
     @OneToMany(mappedBy="item")
-    List<Item> items;
+    private Set<ItemValue> itemValues;
 }
