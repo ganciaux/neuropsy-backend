@@ -1,4 +1,4 @@
-package com.ganciaux.neuropsy.repositories.repositories;
+package com.ganciaux.neuropsy.repositories;
 
 import com.ganciaux.neuropsy.models.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
